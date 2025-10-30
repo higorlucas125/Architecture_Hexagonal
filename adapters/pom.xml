@@ -28,6 +28,15 @@
         <java.version>21</java.version>
     </properties>
 
+    <dependencies>
+        <!-- Dependência da camada de aplicação, se precisar -->
+        <dependency>
+            <groupId>com.hexagonal.create_app_hexagonal</groupId>
+            <artifactId>application</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
     <build>
         <plugins>
             <plugin>
