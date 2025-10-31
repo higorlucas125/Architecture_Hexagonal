@@ -28,4 +28,5 @@ public class Product {
     private Double depth;                   // Profundidade (cm)
     private LocalDateTime createdAt;        // Data/hora de criação
     private LocalDateTime updatedAt;        // Data/hora da última atualização
+    private Long consumerId;
 }

@@ -21,4 +21,5 @@ public class Address {
     private String country;       // País
     private String zipCode;       // CEP
     private Boolean mainAddress;  // Indica se é o endereço principal
+    private Long consumerId;
 }

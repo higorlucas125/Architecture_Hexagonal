@@ -1,13 +1,24 @@
 package com.hexagonal.create_app_hexagonal.adapters.persistence.in.mapper;
 
+import com.hexagonal.create_app_hexagonal.adapters.persistence.in.domain.ConsumerEntity;
 import com.hexagonal.create_app_hexagonal.adapters.persistence.in.domain.ProductEntity;
 import com.hexagonal.create_app_hexagonal.application.domain.Product;
 
+import java.time.LocalDateTime;
+
 public class ProductMapper {
 
-    public static ProductEntity mapperToEntity(Product product){
+    public static ProductEntity.ProductEntityBuilder mapper(Product product){
+
+        ConsumerEntity consumerEntity = null;
+
+        if (product.getConsumerId() != null) {
+            consumerEntity = ConsumerEntity.builder()
+                    .withId(product.getConsumerId())
+                    .build();
+        }
+
         return ProductEntity.builder()
-                .withId(product.getId())
                 .withName(product.getName())
                 .withDescription(product.getDescription())
                 .withSku(product.getSku())
@@ -18,11 +29,32 @@ public class ProductMapper {
                 .withHeight(product.getHeight())
                 .withWidth(product.getWidth())
                 .withDepth(product.getDepth())
-                .withActive(product.getActive())
-                .build();
+                .withConsumerEntity(consumerEntity)
+                .withActive(product.getActive());
     }
 
-    public static Product mapperToDomain(ProductEntity product){
-        return Product.builder().build();
+    public static ProductEntity mapperToEntity(Product product){
+        return mapper(product).build();
+    }
+
+    public static Product mapperToDomain(ProductEntity entity){
+        return Product.builder()
+                .withId(entity.getId())
+                .withName(entity.getName())
+                .withDescription(entity.getDescription())
+                .withSku(entity.getSku())
+                .withCategory(entity.getCategory())
+                .withPrice(entity.getPrice())
+                .withQuantityInStock(entity.getQuantityInStock())
+                .withActive(entity.getActive())
+                .withBrand(entity.getBrand())
+                .withWeight(entity.getWeight())
+                .withHeight(entity.getHeight())
+                .withWidth(entity.getWidth())
+                .withDepth(entity.getDepth())
+                .withCreatedAt(entity.getCreatedAt())
+                .withUpdatedAt(entity.getUpdatedAt())
+                .withConsumerId(entity.getConsumerEntity() != null ? entity.getConsumerEntity().getId() : null)
+                .build();
     }
 }
