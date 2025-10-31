@@ -1,9 +1,9 @@
 package com.hexagonal.create_app_hexagonal.adapters.persistence.out;
 
+import com.hexagonal.create_app_hexagonal.adapters.persistence.in.mapper.AddressMapper;
 import com.hexagonal.create_app_hexagonal.adapters.persistence.in.mysql.repository.AddressRepository;
 import com.hexagonal.create_app_hexagonal.application.domain.Address;
 import com.hexagonal.create_app_hexagonal.application.in.AddressEntityPort;
-import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
@@ -17,26 +17,38 @@ public class AddressEntityPorts implements AddressEntityPort {
 
     @Override
     public Address findById(Long id) {
-        return null;
+        var entity = repository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Endereço não encontrado"));
+        return AddressMapper.mapToDomain(entity);
     }
 
     @Override
     public List<Address> findByAll() {
-        return List.of();
+        return repository.findAll().stream()
+                .map(AddressMapper::mapToDomain)
+                .toList();
     }
 
     @Override
     public void save(Address address) {
-
+        var entity = AddressMapper.mapToEntity(address);
+        repository.save(entity);
     }
 
     @Override
     public void update(Address address, Long id) {
+        var existingEntity = repository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Endereço não encontrado"));
 
+        var updatedEntity = AddressMapper.mapToEntity(address);
+        updatedEntity.setId(existingEntity.getId());
+        repository.save(updatedEntity);
     }
 
     @Override
     public void delete(Long id) {
-
+        var entity = repository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Endereço não encontrado"));
+        repository.deleteById(entity.getId());
     }
 }
