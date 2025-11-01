@@ -14,9 +14,9 @@ import java.util.List;
 @RequiredArgsConstructor
 public class InterfaceWebService implements InterfaceUseCase {
 
-    private AddressEntityPort addressEntityPort;
-    private ConsumerEntityPort consumerEntityPort;
-    private ProductEntityPort productEntityPort;
+    private final AddressEntityPort addressEntityPort;
+    private final ConsumerEntityPort consumerEntityPort;
+    private final ProductEntityPort productEntityPort;
 
     @Override
     public void saveNewConsumer(Consumer consumer) {

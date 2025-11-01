@@ -1,4 +1,4 @@
-package com.hexagonal.create_app_hexagonal.adapters.persistence.in.domain.enums;
+package com.hexagonal.create_app_hexagonal.adapters.persistence.in.entity.enums;
 
 public enum State {
 

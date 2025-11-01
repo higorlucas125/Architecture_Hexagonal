@@ -1,10 +1,8 @@
 package com.hexagonal.create_app_hexagonal.adapters.persistence.in.mapper;
 
-import com.hexagonal.create_app_hexagonal.adapters.persistence.in.domain.ConsumerEntity;
-import com.hexagonal.create_app_hexagonal.adapters.persistence.in.domain.ProductEntity;
+import com.hexagonal.create_app_hexagonal.adapters.persistence.in.entity.ConsumerEntity;
+import com.hexagonal.create_app_hexagonal.adapters.persistence.in.entity.ProductEntity;
 import com.hexagonal.create_app_hexagonal.application.domain.Product;
-
-import java.time.LocalDateTime;
 
 public class ProductMapper {
 
@@ -29,7 +27,7 @@ public class ProductMapper {
                 .withHeight(product.getHeight())
                 .withWidth(product.getWidth())
                 .withDepth(product.getDepth())
-                .withConsumerEntity(consumerEntity)
+                .withConsumer(consumerEntity)
                 .withActive(product.getActive());
     }
 
@@ -54,7 +52,7 @@ public class ProductMapper {
                 .withDepth(entity.getDepth())
                 .withCreatedAt(entity.getCreatedAt())
                 .withUpdatedAt(entity.getUpdatedAt())
-                .withConsumerId(entity.getConsumerEntity() != null ? entity.getConsumerEntity().getId() : null)
+                .withConsumerId(entity.getConsumer() != null ? entity.getConsumer().getId() : null)
                 .build();
     }
 }

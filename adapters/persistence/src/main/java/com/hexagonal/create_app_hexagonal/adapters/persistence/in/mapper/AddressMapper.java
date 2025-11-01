@@ -1,9 +1,9 @@
 package com.hexagonal.create_app_hexagonal.adapters.persistence.in.mapper;
 
-import com.hexagonal.create_app_hexagonal.adapters.persistence.in.domain.AddressEntity;
-import com.hexagonal.create_app_hexagonal.adapters.persistence.in.domain.ConsumerEntity;
+import com.hexagonal.create_app_hexagonal.adapters.persistence.in.entity.AddressEntity;
+import com.hexagonal.create_app_hexagonal.adapters.persistence.in.entity.ConsumerEntity;
 import com.hexagonal.create_app_hexagonal.application.domain.Address;
-import com.hexagonal.create_app_hexagonal.adapters.persistence.in.domain.enums.State;
+import com.hexagonal.create_app_hexagonal.adapters.persistence.in.entity.enums.State;
 import java.util.Objects;
 
 import static com.hexagonal.create_app_hexagonal.adapters.persistence.utils.EnumsMapper.mapEnum;
@@ -29,7 +29,7 @@ public class AddressMapper {
                 .withCountry(address.getCountry())
                 .withZipCode(address.getZipCode())
                 .withMainAddress(address.getMainAddress())
-                .withConsumerEntity(consumerEntity);
+                .withConsumer(consumerEntity);
     }
 
     public static AddressEntity mapToEntity(Address address){
@@ -48,7 +48,7 @@ public class AddressMapper {
                 .withCountry(address.getCountry())
                 .withZipCode(address.getZipCode())
                 .withMainAddress(address.getMainAddress())
-                .withConsumerId(address.getConsumerEntity().getId())
+                .withConsumerId(address.getConsumer().getId())
                 .build();
     }
 

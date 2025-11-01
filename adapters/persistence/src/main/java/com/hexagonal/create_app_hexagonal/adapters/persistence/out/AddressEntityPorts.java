@@ -4,16 +4,17 @@ import com.hexagonal.create_app_hexagonal.adapters.persistence.in.mapper.Address
 import com.hexagonal.create_app_hexagonal.adapters.persistence.in.mysql.repository.AddressRepository;
 import com.hexagonal.create_app_hexagonal.application.domain.Address;
 import com.hexagonal.create_app_hexagonal.application.in.AddressEntityPort;
+import com.hexagonal.create_app_hexagonal.communs.Persistence;
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-@Repository
+@Persistence
 @RequiredArgsConstructor
 public class AddressEntityPorts implements AddressEntityPort {
 
-    private AddressRepository repository;
+    private final AddressRepository repository;
 
     @Override
     public Address findById(Long id) {

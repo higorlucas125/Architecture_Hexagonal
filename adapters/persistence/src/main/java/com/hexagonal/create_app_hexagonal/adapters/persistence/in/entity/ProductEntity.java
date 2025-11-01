@@ -1,4 +1,4 @@
-package com.hexagonal.create_app_hexagonal.adapters.persistence.in.domain;
+package com.hexagonal.create_app_hexagonal.adapters.persistence.in.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -44,5 +44,5 @@ public class ProductEntity {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "consumer_id")
-    private ConsumerEntity consumerEntity;
+    private ConsumerEntity consumer;
 }

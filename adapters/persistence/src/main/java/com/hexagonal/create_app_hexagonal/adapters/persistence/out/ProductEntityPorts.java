@@ -4,18 +4,20 @@ package com.hexagonal.create_app_hexagonal.adapters.persistence.out;
 import com.hexagonal.create_app_hexagonal.adapters.persistence.in.mysql.repository.ProductRepository;
 import com.hexagonal.create_app_hexagonal.application.domain.Product;
 import com.hexagonal.create_app_hexagonal.application.in.ProductEntityPort;
+import com.hexagonal.create_app_hexagonal.communs.Persistence;
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Component;
+
 
 import java.util.List;
 
 import static com.hexagonal.create_app_hexagonal.adapters.persistence.in.mapper.ProductMapper.*;
 
-@Repository
+@Persistence
 @RequiredArgsConstructor
 public class ProductEntityPorts implements ProductEntityPort {
 
-    private ProductRepository repository;
+    private final ProductRepository repository;
 
     @Override
     public Product findById(Long id) {

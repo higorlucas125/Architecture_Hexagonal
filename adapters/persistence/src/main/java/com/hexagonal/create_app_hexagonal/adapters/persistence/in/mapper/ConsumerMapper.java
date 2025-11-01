@@ -1,8 +1,8 @@
 package com.hexagonal.create_app_hexagonal.adapters.persistence.in.mapper;
 
-import com.hexagonal.create_app_hexagonal.adapters.persistence.in.domain.AddressEntity;
-import com.hexagonal.create_app_hexagonal.adapters.persistence.in.domain.ConsumerEntity;
-import com.hexagonal.create_app_hexagonal.adapters.persistence.in.domain.ProductEntity;
+import com.hexagonal.create_app_hexagonal.adapters.persistence.in.entity.AddressEntity;
+import com.hexagonal.create_app_hexagonal.adapters.persistence.in.entity.ConsumerEntity;
+import com.hexagonal.create_app_hexagonal.adapters.persistence.in.entity.ProductEntity;
 import com.hexagonal.create_app_hexagonal.application.domain.Address;
 import com.hexagonal.create_app_hexagonal.application.domain.Consumer;
 import com.hexagonal.create_app_hexagonal.application.domain.Product;

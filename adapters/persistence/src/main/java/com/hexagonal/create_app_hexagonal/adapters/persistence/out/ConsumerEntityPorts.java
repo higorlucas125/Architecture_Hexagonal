@@ -4,18 +4,19 @@ import com.hexagonal.create_app_hexagonal.adapters.persistence.in.mysql.reposito
 import com.hexagonal.create_app_hexagonal.application.domain.Consumer;
 import com.hexagonal.create_app_hexagonal.application.in.ConsumerEntityPort;
 import com.hexagonal.create_app_hexagonal.adapters.persistence.in.mapper.ConsumerMapper;
+import com.hexagonal.create_app_hexagonal.communs.Persistence;
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 import static com.hexagonal.create_app_hexagonal.adapters.persistence.in.mapper.ConsumerMapper.mapToDomain;
 
-@Repository
+@Persistence
 @RequiredArgsConstructor
 public class ConsumerEntityPorts implements ConsumerEntityPort {
 
-    private ConsumerRepository repository;
+
+    private final ConsumerRepository repository;
 
     @Override
     public Consumer findById(Long id) {
