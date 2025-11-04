@@ -5,6 +5,7 @@ import com.hexagonal.create_app_hexagonal.application.in.AddressEntityPort;
 import com.hexagonal.create_app_hexagonal.application.in.ConsumerEntityPort;
 import com.hexagonal.create_app_hexagonal.application.in.ProductEntityPort;
 import com.hexagonal.create_app_hexagonal.application.out.InterfaceUseCase;
+
 import com.hexagonal.create_app_hexagonal.communs.UseCase;
 import lombok.RequiredArgsConstructor;
 

@@ -11,10 +11,10 @@
 	<groupId>com.hexagonal</groupId>
 	<artifactId>create_app_hexagonal</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
 	<name>create_app_hexagonal</name>
 	<description>This project is a hexagonal architectural training exercise.</description>
 
-	<packaging>pom</packaging>
 
 	<modules>
 		<module>startApplication</module>

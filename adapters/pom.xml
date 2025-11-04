@@ -7,14 +7,9 @@
         <groupId>com.hexagonal</groupId>
         <artifactId>create_app_hexagonal</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <groupId>com.hexagonal.create_app_hexagonal</groupId>
     <artifactId>adapters</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>adapters</name>
-    <description>adapters</description>
     <packaging>pom</packaging>
 
 
@@ -35,6 +30,7 @@
             <artifactId>application</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
+
     </dependencies>
 
     <build>

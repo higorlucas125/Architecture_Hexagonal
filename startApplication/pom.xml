@@ -6,14 +6,9 @@
 		<groupId>com.hexagonal</groupId>
 		<artifactId>create_app_hexagonal</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
-		<relativePath>../pom.xml</relativePath>
 	</parent>
 
-	<groupId>com.hexagonal.create_app_hexagonal</groupId>
 	<artifactId>startApplication</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>startApplication</name>
-	<description>startApplication</description>
 
 	<properties>
 		<java.version>21</java.version>
@@ -27,37 +22,54 @@
 
 		<!-- Dependência da camada de aplicação, se precisar -->
 		<dependency>
-			<groupId>com.hexagonal.create_app_hexagonal</groupId>
+			<groupId>com.hexagonal</groupId>
 			<artifactId>application</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
+			<scope>compile</scope>
 		</dependency>
 
 		<!-- Dependência da camada communs -->
 		<dependency>
-			<groupId>com.hexagonal.create_app_hexagonal</groupId>
+			<groupId>com.hexagonal</groupId>
 			<artifactId>communs</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
+			<scope>compile</scope>
 		</dependency>
 
 		<dependency>
-			<groupId>com.hexagonal.create_app_hexagonal.adapters</groupId>
+			<groupId>com.hexagonal</groupId>
 			<artifactId>web</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
+			<scope>compile</scope>
 		</dependency>
 
 		<dependency>
-			<groupId>com.hexagonal.create_app_hexagonal.adapters</groupId>
+			<groupId>com.hexagonal</groupId>
 			<artifactId>persistence</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
+			<scope>compile</scope>
 		</dependency>
 
 		<dependency>
-			<groupId>com.hexagonal.create_app_hexagonal.adapters</groupId>
+			<groupId>com.hexagonal</groupId>
 			<artifactId>messagens</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
+			<scope>compile</scope>
 		</dependency>
 
 	</dependencies>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.hexagonal</groupId>
+				<artifactId>adapters</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 
 
 	<build>

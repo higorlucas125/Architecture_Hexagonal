@@ -6,7 +6,6 @@ import com.hexagonal.create_app_hexagonal.application.domain.Address;
 import com.hexagonal.create_app_hexagonal.application.in.AddressEntityPort;
 import com.hexagonal.create_app_hexagonal.communs.Persistence;
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Component;
 
 import java.util.List;
 

@@ -4,17 +4,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.hexagonal.create_app_hexagonal</groupId>
+        <groupId>com.hexagonal</groupId>
         <artifactId>adapters</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath>../../adapters/pom.xml</relativePath>
     </parent>
 
-    <groupId>com.hexagonal.create_app_hexagonal.adapters</groupId>
     <artifactId>persistence</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>persistence</name>
-    <description>persistence</description>
 
     <properties>
         <java.version>21</java.version>
@@ -36,8 +31,14 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.11</version>
         </dependency>
+        <dependency>
+            <groupId>com.hexagonal</groupId>
+            <artifactId>communs</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
 
-<!--        <dependency>-->
+        <!--        <dependency>-->
 <!--            <groupId>com.h2database</groupId>-->
 <!--            <artifactId>h2</artifactId>-->
 <!--            <scope>runtime</scope>-->
