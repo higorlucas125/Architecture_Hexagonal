@@ -1,6 +1,7 @@
 package com.hexagonal.create_app_hexagonal.adapters.persistence.out;
 
-import com.hexagonal.create_app_hexagonal.adapters.persistence.in.mysql.repository.ConsumerRepository;
+
+import com.hexagonal.create_app_hexagonal.adapters.persistence.in.repository.ConsumerRepository;
 import com.hexagonal.create_app_hexagonal.application.domain.Consumer;
 import com.hexagonal.create_app_hexagonal.application.in.ConsumerEntityPort;
 import com.hexagonal.create_app_hexagonal.adapters.persistence.in.mapper.ConsumerMapper;

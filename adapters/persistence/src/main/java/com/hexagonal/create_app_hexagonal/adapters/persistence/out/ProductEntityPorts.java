@@ -1,12 +1,11 @@
 package com.hexagonal.create_app_hexagonal.adapters.persistence.out;
 
 
-import com.hexagonal.create_app_hexagonal.adapters.persistence.in.mysql.repository.ProductRepository;
+import com.hexagonal.create_app_hexagonal.adapters.persistence.in.repository.ProductRepository;
 import com.hexagonal.create_app_hexagonal.application.domain.Product;
 import com.hexagonal.create_app_hexagonal.application.in.ProductEntityPort;
 import com.hexagonal.create_app_hexagonal.communs.Persistence;
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Component;
 
 
 import java.util.List;

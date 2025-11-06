@@ -1,7 +1,7 @@
 package com.hexagonal.create_app_hexagonal.adapters.persistence.out;
 
 import com.hexagonal.create_app_hexagonal.adapters.persistence.in.mapper.AddressMapper;
-import com.hexagonal.create_app_hexagonal.adapters.persistence.in.mysql.repository.AddressRepository;
+import com.hexagonal.create_app_hexagonal.adapters.persistence.in.repository.AddressRepository;
 import com.hexagonal.create_app_hexagonal.application.domain.Address;
 import com.hexagonal.create_app_hexagonal.application.in.AddressEntityPort;
 import com.hexagonal.create_app_hexagonal.communs.Persistence;

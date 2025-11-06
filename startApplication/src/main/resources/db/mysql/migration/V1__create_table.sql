@@ -28,15 +28,15 @@ CREATE TABLE product (
 -- =====================================
 CREATE TABLE address (
                          id BIGINT AUTO_INCREMENT PRIMARY KEY,
-                         street VARCHAR(150) NOT NULL,
-                         number VARCHAR(10),
-                         complement VARCHAR(100),
-                         neighborhood VARCHAR(100),
-                         city VARCHAR(100) NOT NULL,
-                         state CHAR(2) NOT NULL,
-                         zip_code VARCHAR(10) NOT NULL,
+                         street VARCHAR(255) NOT NULL,
+                         number VARCHAR(50) NOT NULL,
+                         complement VARCHAR(255),
+                         neighborhood VARCHAR(255) NOT NULL,
+                         city VARCHAR(255) NOT NULL,
+                         state VARCHAR(2) NOT NULL,
+                         country VARCHAR(100) NOT NULL,
+                         zip_code VARCHAR(20),
+                         main_address BOOLEAN DEFAULT FALSE,
                          consumer_id BIGINT,
-                         FOREIGN KEY (consumer_id) REFERENCES consumer(id)
-                             ON DELETE CASCADE
-                             ON UPDATE CASCADE
+                         CONSTRAINT fk_address_consumer FOREIGN KEY (consumer_id) REFERENCES consumer(id)
 );

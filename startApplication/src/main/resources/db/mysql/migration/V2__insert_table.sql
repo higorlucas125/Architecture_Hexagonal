@@ -17,9 +17,19 @@ INSERT INTO product (name, description, price, consumer_id) VALUES
 ('Teclado Mecânico Redragon', 'Teclado RGB Switch Blue', 280.00, 5);
 
 
-INSERT INTO address (street, number, complement, neighborhood, city, state, zip_code, consumer_id) VALUES
-('Rua das Flores', '123', 'Apto 45', 'Centro', 'Uberlândia', 'MG', '38400-000', 1),
-('Avenida Brasil', '456', NULL, 'Savassi', 'Belo Horizonte', 'MG', '30140-000', 2),
-('Rua XV de Novembro', '789', 'Casa 2', 'Centro', 'Curitiba', 'PR', '80020-310', 3),
-('Rua das Palmeiras', '100', NULL, 'Copacabana', 'Rio de Janeiro', 'RJ', '22070-000', 4),
-('Rua Goiás', '55', 'Bloco B', 'Funcionários', 'Belo Horizonte', 'MG', '30130-090', 5);
+INSERT INTO address (
+    street,
+    number,
+    complement,
+    neighborhood,
+    city,
+    state,
+    country,
+    zip_code,
+    main_address,
+    consumer_id
+) VALUES
+      ('Rua das Flores', '123', 'Apto 45', 'Centro', 'Uberlândia', 'MG', 'Brasil', '38400-000', FALSE, 1),
+      ('Avenida Brasil', '456', NULL, 'Savassi', 'Belo Horizonte', 'MG', 'Brasil', '30140-000', TRUE, 2),
+      ('Rua XV de Novembro', '789', 'Casa 2', 'Centro', 'Curitiba', 'PR', 'Brasil', '80020-310', FALSE, 3),
+      ('Rua das Palmeiras', '100', NULL, 'Copacabana', 'Rio de Janeiro', 'RJ', 'Brasil', '22070-000', TRUE, 4);
