@@ -1,16 +1,7 @@
 package com.hexagonal.create_app_hexagonal.adapters.persistence.in.entity;
 
 import com.hexagonal.create_app_hexagonal.adapters.persistence.in.entity.enums.State;
-import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.FetchType;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -34,6 +25,7 @@ public class AddressEntity {
     @NonNull
     private String street;        // Rua / Logradouro
     @NonNull
+    @Column(name = "street_number")
     private String number;        // Número
     private String complement;    // Complemento (ex: Apto 101, Bloco B)
     @NonNull
@@ -46,6 +38,7 @@ public class AddressEntity {
     @NonNull
     private String country;       // País
     private String zipCode;       // CEP
+
     private Boolean mainAddress;  // Indica se é o endereço principal
 
     @ManyToOne(fetch = FetchType.LAZY)

@@ -29,7 +29,7 @@ CREATE TABLE product (
 CREATE TABLE address (
                          id BIGINT AUTO_INCREMENT PRIMARY KEY,
                          street VARCHAR(255) NOT NULL,
-                         number VARCHAR(50) NOT NULL,
+                         street_number VARCHAR(50) NOT NULL,
                          complement VARCHAR(255),
                          neighborhood VARCHAR(255) NOT NULL,
                          city VARCHAR(255) NOT NULL,
@@ -64,7 +64,7 @@ INSERT INTO product (name, description, price, consumer_id) VALUES
 
 INSERT INTO address (
     street,
-    number,
+    street_number,
     complement,
     neighborhood,
     city,

@@ -1,7 +1,7 @@
 package com.hexagonal.create_app_hexagonal.adapters.persistence.out;
 
 import com.hexagonal.create_app_hexagonal.adapters.persistence.PersistenceTestConfig;
-import com.hexagonal.create_app_hexagonal.adapters.persistence.suporte.PostgresTestContainerConfig;
+import com.hexagonal.create_app_hexagonal.adapters.persistence.suporte.PlsqlTestContainerConfig;
 import com.hexagonal.create_app_hexagonal.application.in.AddressEntityPort;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -11,11 +11,13 @@ import org.springframework.util.CollectionUtils;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
+
 @SpringBootTest(classes = PersistenceTestConfig.class)
-public class AddressEntityPortsPostgresTest extends PostgresTestContainerConfig {
+public class AddressEntityPortsOracleSql extends PlsqlTestContainerConfig {
 
     @Autowired
     private AddressEntityPort addressEntityPort;
+
 
     @Test
     @DisplayName("Given Find All When call Address Then return Address List")

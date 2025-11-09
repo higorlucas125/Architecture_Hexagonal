@@ -1,7 +1,7 @@
 package com.hexagonal.create_app_hexagonal.adapters.persistence.out;
 
 import com.hexagonal.create_app_hexagonal.adapters.persistence.suporte.MysqlTestContainerConfig;
-import com.hexagonal.create_app_hexagonal.adapters.persistence.suporte.PersistenceTestConfig;
+import com.hexagonal.create_app_hexagonal.adapters.persistence.PersistenceTestConfig;
 import com.hexagonal.create_app_hexagonal.application.in.AddressEntityPort;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

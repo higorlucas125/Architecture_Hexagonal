@@ -19,7 +19,7 @@ INSERT INTO product (name, description, price, consumer_id) VALUES
 
 INSERT INTO address (
     street,
-    number,
+    street_number,
     complement,
     neighborhood,
     city,
